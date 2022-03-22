@@ -20,7 +20,7 @@ print("Squares up to what number?")
 maxSquare = checkPositive()
 
 print("Squares up to what number?")
-for i in range(5):
+for i in range(numProblems):
     a = 2
     b = 2
     while gcd(a, b) != 1:
