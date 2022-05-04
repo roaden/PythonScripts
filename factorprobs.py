@@ -16,17 +16,14 @@ def checkPositive():
 print("How many problems?")
 numProblems = checkPositive()
 
-print("Squares up to what number?")
-maxSquare = checkPositive()
+print("Coefficients up to what number?")
+maxCoefficient = checkPositive()
 
-print("Squares up to what number?")
 for i in range(numProblems):
-    a = 2
-    b = 2
-    while gcd(a, b) != 1:
-        a = ri(1, maxSquare)
-        b = ri(1, maxSquare)
-    aSquared = str(a**2)
-    bSquared = str(b**2)
-    print(f"{aSquared + ' x^2': >10}" "    - " + f"{bSquared + ' y^2' : >10}")
-
+    a = ri(1,maxCoefficient)
+    if ri(0,1):
+        a = -a
+    b = ri(1, maxCoefficient)
+    if ri(0,1):
+        b = -b
+    print("x^2 + "+ str(a + b)+ " x + "  + str(a*b) + " = (x + " + str(a) + " ) ( x + " + str(b) + " )" )
